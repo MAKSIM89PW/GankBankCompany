@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/transactions")
+@RequestMapping("/api/transactions")
 public class TransactionController {
 
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping("/{accountId}")
-    public List<Transaction> getTransactionsByAccountId(@PathVariable Long accountId) {
-        return transactionService.getTransactionsByAccountId(accountId);
+    @GetMapping("/account/{accountId}")
+    public List<Transaction> getTransactionsForAccount(@PathVariable Long accountId) {
+        return transactionService.getTransactionsForAccount(accountId);
     }
 }

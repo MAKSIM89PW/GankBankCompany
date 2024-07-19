@@ -1,8 +1,8 @@
 package controller;
 
+import dto.AccountDto;
 import dto.TransactionDto;
 import model.Account;
-import dto.AccountDto;
 import service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/accounts")
+@RequestMapping("/api/accounts")
 public class AccountController {
 
     @Autowired
@@ -32,13 +32,13 @@ public class AccountController {
     }
 
     @PostMapping("/{accountId}/deposit")
-    public void deposit(@PathVariable Long accountId, @RequestParam double amount) {
+    public void deposit(@PathVariable Long accountId, @RequestBody double amount) {
         accountService.deposit(accountId, amount);
     }
 
     @PostMapping("/{accountId}/withdraw")
-    public void withdraw(@PathVariable Long accountId, @RequestParam double amount, @RequestParam int pinCode) {
-        accountService.withdraw(accountId, amount, pinCode);
+    public void withdraw(@PathVariable Long accountId, @RequestBody TransactionDto transactionDto) {
+        accountService.withdraw(accountId, transactionDto.getAmount(), transactionDto.getPinCode());
     }
 
     @PostMapping("/transfer")
@@ -51,4 +51,3 @@ public class AccountController {
         );
     }
 }
-

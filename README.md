@@ -24,3 +24,44 @@
 • Должны быть указаны соответствующие коды ошибок и они должны возвращаться, когда операции не увенчались успехом.
 • Использовать базу данных PostgreSQL в качестве резервного хранилища.
 • Используйте Maven\Gradle для управление зависимостями.
+
+Работает - постман
+
+Создание нового аккаунта:
+Метод: POST
+URL: http://localhost:8080/api/accounts
+Body:
+{
+"beneficiaryName": "Jane Doe",
+"pinCode": 5678
+}
+
+Получение всех аккаунтов:
+Метод: GET
+URL: http://localhost:8080/api/accounts
+
+Перевод средств между счетами:
+Метод: POST
+URL: http://localhost:8080/api/accounts/transfer
+{
+"fromAccountId": 1,
+"toAccountId": 2,
+"amount": 50.00,
+"pinCode": 1234
+}
+
+-ToDo
+
+не работает
+
+Внесение средств на счет:
+Метод: POST
+URL: http://localhost:8080/api/accounts/1/deposit
+
+Снятие средств со счета:
+Метод: POST
+URL: http://localhost:8080/api/accounts/1/withdraw
+
+Получение всех транзакций для счета:
+Метод: GET
+URL: http://localhost:8080/api/transactions/account/1

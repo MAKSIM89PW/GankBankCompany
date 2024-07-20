@@ -79,7 +79,7 @@ public class AccountService {
     }
 
     private String generateAccountNumber() {
-        // Simple account number generation logic. You can replace this with a more robust logic.
+
         return String.valueOf(System.currentTimeMillis());
     }
 }

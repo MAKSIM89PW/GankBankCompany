@@ -1,6 +1,6 @@
-package service;
+package Bank.service;
 
-import model.Beneficiary;
+import Bank.model.Beneficiary;
 
 public interface BeneficiaryService {
     Beneficiary createBeneficiary(String name);

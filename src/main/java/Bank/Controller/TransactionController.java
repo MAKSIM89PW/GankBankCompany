@@ -1,7 +1,7 @@
-package Controller;
+package Bank.Controller;
 
-import model.Transaction;
-import service.TransactionService;
+import Bank.model.Transaction;
+import Bank.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

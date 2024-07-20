@@ -1,9 +1,9 @@
-package Controller;
+package Bank.Controller;
 
-import dto.AccountDto;
-import dto.TransactionDto;
-import model.Account;
-import service.AccountService;
+import Bank.dto.TransactionDto;
+import Bank.model.Account;
+import Bank.service.AccountService;
+import Bank.dto.AccountDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

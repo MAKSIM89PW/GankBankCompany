@@ -1,4 +1,4 @@
-package dto;
+package Bank.dto;
 
 public class ErrorResponse {
     private String errorCode;

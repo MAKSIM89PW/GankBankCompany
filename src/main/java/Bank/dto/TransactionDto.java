@@ -1,4 +1,4 @@
-package dto;
+package Bank.dto;
 
 public class TransactionDto {
     private Long fromAccountId;

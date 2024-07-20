@@ -1,16 +1,15 @@
-package service;
+package Bank.service;
 
-import dto.AccountDto;
-import model.Account;
-import model.Beneficiary;
-import repository.AccountRepository;
-import repository.BeneficiaryRepository;
+import Bank.dto.AccountDto;
+import Bank.model.Account;
+import Bank.model.Beneficiary;
+import Bank.repository.AccountRepository;
+import Bank.repository.BeneficiaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AccountService {

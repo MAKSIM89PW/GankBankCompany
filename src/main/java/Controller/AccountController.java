@@ -1,4 +1,4 @@
-package controller;
+package Controller;
 
 import dto.AccountDto;
 import dto.TransactionDto;
